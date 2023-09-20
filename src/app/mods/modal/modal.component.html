@@ -1,0 +1,28 @@
+<div
+  class="ui dimmer modals page transition visible active"
+  style="display: flex !important"
+  (click)="onClose()"
+>
+  <div
+    class="ui standard test modal transition visible active"
+    style="display: block !important"
+    (click)="$event.stopPropagation()"
+  >
+    <i class="close icon" (click)="onClose()"></i>
+    <div class="header">
+      <ng-content select="[headerTitle]"></ng-content>
+    </div>
+    <ng-content select="header"></ng-content>
+
+    <ng-content></ng-content>
+    <div class="actions">
+      <ng-content select="[modalFooter]"></ng-content>
+    </div>
+    <div class="actions actions-default">
+      <div class="ui positive right labeled icon button" (click)="onClose()">
+        Yep, that's me
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+</div>

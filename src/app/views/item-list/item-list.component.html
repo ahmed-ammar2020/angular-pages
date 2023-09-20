@@ -1,0 +1,22 @@
+<div class="ui unstackable items">
+  <div class="item" *ngFor="let list of lists">
+    <div class="image">
+      <img [src]="list.imageURL" />
+    </div>
+    <div class="content">
+      <a class="header">
+        {{ list.header }}
+      </a>
+      <div class="meta">
+        <span>
+          {{ list.meta }}
+        </span>
+      </div>
+      <div class="description">
+        <p>
+          {{ list.description }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

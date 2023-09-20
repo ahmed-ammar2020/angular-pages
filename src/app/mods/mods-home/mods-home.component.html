@@ -1,0 +1,28 @@
+<app-divider>Modal</app-divider>
+<button class="ui primary button" (click)="toggleModal()">Show Modal</button>
+<app-modal (close)="toggleModal()" *ngIf="modalShown">
+  <p headerTitle>Select an image</p>
+  <div class="image content">
+    <div class="ui medium image">
+      <img src="/images/avatar2/large/rachel.png" />
+    </div>
+    <div class="description">
+      <div class="ui header">Default Profile Image</div>
+      <p>
+        We've found the following
+        <a href="https://www.gravatar.com" target="_blank">gravatar</a> image
+        associated with your e-mail address.
+      </p>
+      <p>Is it okay to use this photo?</p>
+    </div>
+  </div>
+  <div modalFooter>
+    <div class="ui positive right labeled icon button" (click)="toggleModal()">
+      Close me
+      <i class="checkmark icon"></i>
+    </div>
+  </div>
+</app-modal>
+
+<app-divider>Accordion</app-divider>
+<app-accordion [accords]="accords"></app-accordion>

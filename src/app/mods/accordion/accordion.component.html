@@ -1,0 +1,17 @@
+<div class="ui styled fluid accordion">
+  <ng-container *ngFor="let accord of accords; let i = index" class="accord">
+    <div
+      class="title"
+      [ngClass]="{ active: i === openedIndex }"
+      (click)="toggleAccord(i)"
+    >
+      <i class="dropdown icon"></i>
+      {{ accord.question }}
+    </div>
+    <div class="content" [ngClass]="{ active: i === openedIndex }">
+      <p class="transition visible" style="display: block !important">
+        {{ accord.answer }}
+      </p>
+    </div>
+  </ng-container>
+</div>
